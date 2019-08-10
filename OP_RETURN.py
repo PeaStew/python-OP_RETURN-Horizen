@@ -401,7 +401,7 @@ def OP_RETURN_get_block_txns(height, testnet):
 	
 	block=OP_RETURN_unpack_block(raw_block['block'])
 	
-	return block['tx']
+	return block['txs']
 
 
 # Talking to bitcoin-cli
@@ -616,7 +616,7 @@ def OP_RETURN_unpack_block(binary):
 	block['nonce']=buffer.shift_unpack(4, '<L')
 	block['tx_count']=buffer.shift_varint()
 	
-	block['tx']={}
+	block['txs']={}
 	
 	old_ptr=buffer.used()
 	
@@ -631,7 +631,7 @@ def OP_RETURN_unpack_block(binary):
 		old_ptr=new_ptr
 	
 		transaction['size']=size
-		block['tx'][txid]=transaction
+		block['txs'][txid]=transaction
 	
 	return block
 
