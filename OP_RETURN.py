@@ -346,7 +346,7 @@ def OP_RETURN_create_txn(inputs, outputs, metadata, metadata_pos, testnet):
 
 	txn_unpacked['vout'][metadata_pos:metadata_pos]=[{
 		'value': 0,
-		'scriptPubKey': '6a'+ OP_RETURN_bin_to_hex(payload) +"52617577616E206D6F76657320696E206D7973746572696F75732077617973"\
+		'scriptPubKey': '6a'+ OP_RETURN_bin_to_hex(payload) +"20bb1acf2c1fc1228967a611c7db30632098f0c641855180b5fe23793b72eea50d"\
         +"00b4" # here's the OP_RETURN
 	}]
 	
