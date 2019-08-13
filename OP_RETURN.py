@@ -463,7 +463,7 @@ def OP_RETURN_bitcoin_cmd(command, testnet, *args): # more params are read from 
 		url='http://'+OP_RETURN_BITCOIN_IP+':'+str(port)+'/'
 		
 		try:
-			from urllib2 import HTTPPasswordMgrWithDefaultRealm, HTTPBasicAuthHandler, build_opener, install_opener, urlopen
+			from urllib import HTTPPasswordMgrWithDefaultRealm, HTTPBasicAuthHandler, build_opener, install_opener, urlopen
 		except ImportError:
 			from urllib.request import HTTPPasswordMgrWithDefaultRealm, HTTPBasicAuthHandler, build_opener, install_opener, urlopen
 
